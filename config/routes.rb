@@ -1,6 +1,6 @@
 PayolaSpy::Engine.routes.draw do
-  get 'subscriptions' => 'subscriptions#index'
 
-  get 'subscriptions/:id' => 'subscriptions#show'
+  resources :subscriptions, :only => [:index,:show]
 
+  root 'subscriptions#index'
 end

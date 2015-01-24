@@ -19,8 +19,9 @@ Gem::Specification.new do |s|
 
   s.add_dependency "rails", "~> 4.1.8"
   s.add_dependency "payola-payments", "~> 1.2.4"
-  s.add_dependency 'bootstrap-sass', '~> 3.3.3'
+  s.add_dependency 'bootstrap-sass', '~> 3.2.0.0'
   s.add_dependency 'sass-rails', '>= 3.2'
+  s.add_dependency 'kaminari', '~> 0.16.2'
 
   s.add_development_dependency "sqlite3"
 end

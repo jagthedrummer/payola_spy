@@ -1,2 +1,15 @@
-<h1>Subscriptions#show</h1>
-<p>Find me in app/views/payola_spy/subscriptions/show.html.erb</p>
+<h1>Subscriptions #<%= @subscription.guid %></h1>
+<table class="table table-hover table-striped">
+  <tr>
+    <th>Attribute</th>
+    <th>Value</th>
+  </tr>
+  <% @subscription.attributes.sort.each do |key,value| %>
+    <tr>
+      <td><%= key %></td>
+      <td><%= value %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to "Back", subscriptions_path, :class => 'btn btn-primary' %>

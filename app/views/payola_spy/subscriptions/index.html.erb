@@ -1,4 +1,20 @@
-<h1><%= @subscriptions.count %> Subscriptions</h1>
-<% @subscriptions.each do |subscription| %>
-  <%= debug subscription %>
-<% end %>
+<h1>Subscriptions (<%= @subscriptions.total_count %> total)</h1>
+<table class="table table-hover table-striped">
+  <tr>
+    <th>Guid</th>
+    <th>Date</th>
+    <th>Email</th>
+    <th class="text-right">Amount</th>
+  </tr>
+  <% @subscriptions.each do |subscription| %>
+    <tr>
+      <td><%= link_to subscription.guid, subscription_path(subscription.guid) %></td>
+      <td><%= time_ago_in_words(subscription.created_at) %> ago</td>
+      <td><%= subscription.email %></td>
+      <td class="text-right"><%= subscription.amount %></td>
+    </tr>
+  <% end %>
+</table>
+<nav>
+  <%= paginate @subscriptions, :theme => 'bootstrap' %>
+</nav>
