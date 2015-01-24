@@ -7,11 +7,11 @@ require "payola_spy/version"
 Gem::Specification.new do |s|
   s.name        = "payola_spy"
   s.version     = PayolaSpy::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of PayolaSpy."
-  s.description = "TODO: Description of PayolaSpy."
+  s.authors     = ["Jeremy Green"]
+  s.email       = ["jeremy@octolabs.com"]
+  s.homepage    = "https://github.com/jagthedrummer/payola_spy"
+  s.summary     = "A quick and dirty Rails engine for watching Payola payment activity."
+  s.description = "A quick and dirty Rails engine for watching Payola payment activity."
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
