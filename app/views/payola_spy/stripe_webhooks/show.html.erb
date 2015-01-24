@@ -1,0 +1,16 @@
+<h1>Stripe Webhook #<%= @stripe_webhook.id %></h1>
+<table class="table table-hover table-striped">
+  <tr>
+    <th>Attribute</th>
+    <th>Value</th>
+  </tr>
+  <% @stripe_webhook.attributes.sort.each do |key,value| %>
+    <tr>
+      <td><%= key %></td>
+      <td><%= value %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to "Back", stripe_webhooks_path, :class => 'btn btn-primary' %>
+

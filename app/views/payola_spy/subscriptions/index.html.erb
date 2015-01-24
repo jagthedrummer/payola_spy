@@ -3,6 +3,7 @@
   <tr>
     <th>Guid</th>
     <th>Date</th>
+    <th>State</th>
     <th>Email</th>
     <th class="text-right">Amount</th>
   </tr>
@@ -10,6 +11,7 @@
     <tr>
       <td><%= link_to subscription.guid, subscription_path(subscription.guid) %></td>
       <td><%= time_ago_in_words(subscription.created_at) %> ago</td>
+      <td><%= subscription.state %></td>
       <td><%= subscription.email %></td>
       <td class="text-right"><%= subscription.amount %></td>
     </tr>
