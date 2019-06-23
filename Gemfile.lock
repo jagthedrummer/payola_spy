@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    payola_spy (0.0.2)
+    payola_spy (0.0.3)
       bootstrap-sass (>= 3.2.0.0)
       kaminari (>= 0.16.2)
       payola-payments (>= 1.2.4)
